@@ -10,7 +10,7 @@ function login(){
     if( email == emailCorreto){
         
         if(senha == senhaCorreta){
-            window.open("../index.html");
+            window.location.href = "../index.html";
         } else{
             alert("Senha Incorreta")
         }
