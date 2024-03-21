@@ -1,37 +1,47 @@
-function imprimirMsg(texto){
-    alert('Você clicou no botão ' + texto);
+function digitarValor(valor){
+    valorDisplay = document.getElementById("display");
+
+    if(valorDisplay.value == 0){
+        valorDisplay.value = valor;
+    } else {
+        valorDisplay.value += valor;
+    }
 }
+
+
+function imprimirMsg(texto){
+    alert('Vc clickou no botão ' + texto);
+}
+
 function login(){
-    const emailCorreto = "luciano@gmail.com"
-    const senhaCorreta = "senha"
+    const emailCorreto = "luciano@gmail.com";
+    const senhaCorreta = "senha";
+    
     var email = document.getElementById("email").value;
     var senha = document.getElementById("pwd").value;
 
-    if( email == emailCorreto){
-        
+    if(email == emailCorreto){        
         if(senha == senhaCorreta){
+
+            alert("E-mail e senha corretos");
             window.location.href = "../index.html";
-        } else{
-            alert("Senha Incorreta")
+
+        } else {
+            alert("Senha incorreta.");
         }
+
     } else {
-        alert("Email incorreto");
-    }
-    
-/*
-    if( email == emailCorreto){
-        alert("email correto")
-    } else {
-        alert("Email incorreto")
+        alert("E-mail incorreto");
     }
 
-    if( senha == senhaCorreta){
-        alert("senha correto")
+    /*
+    if(email == emailCorreto && senha == senhaCorreta ){
+        alert("E-mail e senha corretos");
     } else {
-        alert("senha incorreto")
+        alert("E-mail ou senha incorretos.");
     }
 
-    alert("E-mail Digitado: " + email);
-    alert("Senha Digitado: " + pwd);
+    alert("E-mail digitado: " + email);
+    alert("Senha digitada: " + senha);
 */
 }
